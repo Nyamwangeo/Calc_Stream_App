@@ -24,11 +24,11 @@ def calculate_age(birthdate):
 
 # Streamlit app
 def main():
-    st.title("Morning Greeter")
+    st.title("Age Calculation Application")
     
     # Ask for user's name
     name = st.text_input("Please enter your name:")
-    
+
     if name:
         st.success(f"Good morning, {name}!")
         
