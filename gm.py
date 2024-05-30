@@ -38,7 +38,7 @@ def main():
         if dob:
             # Calculate age
             age_years, age_months, days_until_birthday = calculate_age(dob)
-            st.success(f"You are {age_years}, {age_months}, & {days-until_birthday} years old today!")
+            st.success(f"You are {age_years}, {age_months}, & {days_until_birthday} years old today!")
 
 if __name__ == "__main__":
     main()
