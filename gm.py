@@ -42,7 +42,7 @@ def main():
                 age_years, age_months, days_until_birthday = calculate_age(dob)
 
                 # Display age
-                st.write(f"{Name}, you are {age_years} years, {age_months} months, and {days_until_birthday} days old today!")
+                st.write(f"{name}, you are {age_years} years, {age_months} months, and {days_until_birthday} days old today!")
 
 if __name__ == "__main__":
     main()
