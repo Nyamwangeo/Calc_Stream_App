@@ -30,7 +30,7 @@ def main():
     name = st.text_input("Please enter your name:")
     
     if name:
-        st.success(f"Good Morning, {name}!")
+        st.success(f"How are you doing today, {name}, Nyamwange wants to help you precisely calculate your age today!")
         
         # Ask for user's date of birth
         dob = st.date_input("Please enter your date of birth (YYYY-MM-DD):", min_value=datetime(1900, 1, 1))
