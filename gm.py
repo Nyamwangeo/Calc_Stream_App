@@ -24,21 +24,25 @@ def calculate_age(birthdate):
 
 # Streamlit app
 def main():
-    st.title("Age Calculation Application")
+    st.title("Morning Greeter")
     
     # Ask for user's name
     name = st.text_input("Please enter your name:")
     
     if name:
-        st.success(f"How are you doing today, {name}, Nyamwange wants to help you precisely calculate your age today!")
+        st.success(f"Good morning, {name}!")
         
         # Ask for user's date of birth
         dob = st.date_input("Please enter your date of birth (YYYY-MM-DD):", min_value=datetime(1900, 1, 1))
         
-        if dob:
-            # Calculate age
-            age_years, age_months, days_until_birthday = calculate_age(dob)
-            st.success(f"You are {age_years} years, {age_months} months, & {days_until_birthday} days old today!")
+        # Button to calculate age
+        if st.button("Calculate Age"):
+            if dob:
+                # Calculate age
+                age_years, age_months, days_until_birthday = calculate_age(dob)
+
+                # Display age in a table
+                st.table({"Age": [f"{age_years} years, {age_months} months, and {days_until_birthday} days"]})
 
 if __name__ == "__main__":
     main()
