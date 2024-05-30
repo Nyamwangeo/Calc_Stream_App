@@ -41,8 +41,8 @@ def main():
                 # Calculate age
                 age_years, age_months, days_until_birthday = calculate_age(dob)
 
-                # Display age in a table
-                st.table({"Age": [f"Yoy are {age_years} years, {age_months} months, and {days_until_birthday} days"]})
+                # Display age
+                st.write(f"{Name}, you are {age_years} years, {age_months} months, and {days_until_birthday} days old today!")
 
 if __name__ == "__main__":
     main()
