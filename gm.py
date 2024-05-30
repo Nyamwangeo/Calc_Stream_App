@@ -30,14 +30,14 @@ def main():
     name = st.text_input("Please enter your name:")
     
     if name:
-        st.success(f"Good morning, {name}!")
+        st.success(f"Good Morning, {name}!")
         
         # Ask for user's date of birth
         dob = st.date_input("Please enter your date of birth (YYYY-MM-DD):", min_value=datetime(1900, 1, 1))
         
         if dob:
             # Calculate age
-            age = calculate_age(dob)
+            age_years, age_months, days_until_birthday = calculate_age(dob)
             st.success(f"You are {age_years}, {age_months}, & {days-until_birthday} years old today!")
 
 if __name__ == "__main__":
